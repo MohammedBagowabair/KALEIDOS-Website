@@ -1,0 +1,27 @@
+{
+  "name": "kaleidos-website",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "predeploy": "cross-env BASE_PATH=/KALEIDOS-Website/ vite build && node scripts/spa-404.js",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^4.7.0",
+    "cross-env": "^7.0.3",
+    "gh-pages": "^6.3.0",
+    "playwright-core": "^1.63.0",
+    "typescript": "~5.8.3",
+    "vite": "^6.4.3"
+  }
+}
